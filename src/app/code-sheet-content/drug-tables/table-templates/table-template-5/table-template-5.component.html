@@ -1,0 +1,25 @@
+<!--Template for Joule Table-->
+<table [style.border-top]="this.displayTopBoarder() ? '1px solid black' : null">
+  <thead>
+    <tr>
+      <th colspan="2">
+        {{table.IDTTitle}}
+      </th>
+      <th colspan="2" *ngFor='let column of table.IDTCol'>
+        {{column}}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let data of table.IDTRows'>
+      <td colspan="2">
+      </td>
+      <td colspan="2">
+        {{this.ds.flToTxt2Dec(data.drugConcentration) + " " + data.drugConcentrationUOM}}
+      </td>
+      <td colspan="2">
+        {{this.ds.flToTxt2Dec(data.drugCalculatedDose) + " " + data.drugCalculatedDoseUOM}}
+      </td>
+    </tr>
+  </tbody>
+</table>

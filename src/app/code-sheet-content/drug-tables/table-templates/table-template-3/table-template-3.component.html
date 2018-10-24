@@ -1,0 +1,39 @@
+<!--Template for Protocal Table (multi-step-dose table)-->
+<table>
+  <thead>
+    <tr>
+      <th>
+          {{table.IDTTitle}}
+      </th>
+      <th *ngFor='let columns of table.IDTCol'>
+          {{columns}}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor='let data of table.IDTRows; let last = last'>
+          <td></td>
+          <td></td>
+          <td class="noWrap">
+            <div *ngIf='data.drugInitDose!=null'>
+              {{this.ds.flToTxt2Dec(data.drugInitDose) + " " + data.drugInitDoseUOM}}
+              <p *ngIf='!last'>
+                if this fails, then
+              </p>
+            </div>
+          </td>
+          <td class="noWrap">
+            <div *ngIf='data.drugCalculatedDose!=null'>
+              {{this.ds.flToTxt2Dec(data.drugCalculatedDose) + " " + data.drugCalculatedDoseUOM}}
+            </div>
+          </td>
+          <td class="noWrap">
+            <div *ngIf='data.drugVolume!=null'>
+              {{this.ds.flToTxt2Dec(data.drugVolume) + " " + data.drugVolumeUOM}}
+            </div>
+          </td>
+          <td *ngIf='table.IDTCol.length > 4'>
+          </td>
+      </tr>
+  </tbody>
+</table>

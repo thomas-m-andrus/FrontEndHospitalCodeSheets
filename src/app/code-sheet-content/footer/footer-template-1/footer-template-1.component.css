@@ -1,0 +1,21 @@
+.footer{
+    width: 6in;
+}
+.sign{
+    float:right;
+    color: black;
+    font-size: 12px;
+    padding-top:.25in;
+}
+.l1{
+    float:right;
+}
+.l2{
+    float:right;
+}
+.l3{
+    float:right;
+}
+.clear{
+    clear: both;
+}

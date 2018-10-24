@@ -1,0 +1,31 @@
+<!--Template for Rectal Delivery-->
+<div id="tableHeading">
+  <span id="RDtableName">
+    {{table.IDTTitle}}
+  </span>
+  <span id="RDtableInstruc">
+    {{table.IDTRows[0].drugInstruction}}
+  </span>
+</div>
+<p>
+</p>
+<table>
+  <tbody>
+    <tr *ngFor='let data of table.IDTRows'>
+      <td style="font-weight:bold; text-align:left">
+        {{data.drugName}}
+      </td>
+      <td style="text-align:center">
+        {{this.ds.flToTxt2Dec(data.drugConcentration) + " " + data.drugConcentrationUOM}}
+      </td>
+      <td style="text-align:center">
+        {{this.ds.flToTxt2Dec(data.drugInitDose) + " " + data.drugInitDoseUOM}}
+      </td>
+      <td style="padding-left:30px; text-align:center">
+      </td>
+      <td style="text-align:center">
+        {{this.ds.flToTxt2Dec(data.drugCalculatedDose) + " " + data.drugCalculatedDoseUOM}}
+      </td>
+    </tr>
+  </tbody>
+</table>

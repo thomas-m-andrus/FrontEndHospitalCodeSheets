@@ -1,0 +1,51 @@
+<!--Template for Dosage Table-->
+<div class="tableName">{{this.table.IDTTitle}}</div>
+<table>
+  <thead>
+    <tr>
+      <th *ngFor='let columns of this.table.IDTCol'>
+        {{columns}}
+      </th>
+    </tr>
+  </thead>
+  <tbody *ngFor='let data of this.table.IDTRows'>
+    <tr>
+      <td rowspan="2">{{data.drugName}}
+        <div *ngIf='data.drugSubScript!=null'>
+          {{data.drugSubScript}}
+        </div>
+      </td>
+      <td [attr.rowspan]="isNULL(data.drugInstruction) ? '2' : '1'" class="noWrap">
+        <div *ngIf='data.drugConcentration!=null'>
+          {{this.ds.flToTxt2Dec(data.drugConcentration) + " " + data.drugConcentrationUOM}}
+        </div>
+      </td>
+      <td [attr.rowspan]="isNULL(data.drugInstruction) ? '2' : '1'" class="noWrap">
+        <div *ngIf='data.drugInitDose!=null'>
+          {{this.ds.flToTxt2Dec(data.drugInitDose) + " " + data.drugInitDoseUOM}}
+        </div>
+      </td>
+      <td [attr.rowspan]="isNULL(data.drugInstruction) ? '2' : '1'">
+        <div *ngIf='data.drugSuggestion!=null'>
+          {{data.drugSuggestion}}
+        </div>
+      </td>
+      <td [attr.rowspan]="isNULL(data.drugInstruction) ? '2' : '1'" class="noWrap">
+        <div *ngIf='data.drugCalculatedDose!=null'>
+          {{this.ds.flToTxt2Dec(data.drugCalculatedDose) + " " + data.drugCalculatedDoseUOM}}
+        </div>
+      </td>
+      <td [attr.rowspan]="isNULL(data.drugInstruction) ? '2' : '1'" class="noWrap">
+        <div *ngIf='data.drugVolume!=null'>
+          {{this.ds.flToTxt2Dec(data.drugVolume) + " " + data.drugVolumeUOM}}
+        </div>
+      </td>
+    </tr>
+    <tr *ngIf='data.drugInstruction!=null'>
+      <td colspan="5">
+        {{data.drugInstruction}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+      

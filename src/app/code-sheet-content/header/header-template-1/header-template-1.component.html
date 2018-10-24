@@ -1,0 +1,61 @@
+<div *ngIf="this.PatientInfo.patients.length>0">
+    <div class="Header">
+    <div class="all">
+        <div class="patientInfo">
+            <div *ngIf="Name==1" class="wholeLine" id="Name">
+                <span class="lineName" id="NamePos">NAME:</span>
+                <span class="lineLine">____________</span>
+                <span *ngIf="this.PatientInfo.patients.length > 0 && fname!=null" class="inputs">
+                    {{fname + " " + lname}}
+                </span>
+            </div>
+            <div *ngIf="Weight==1" class="wholeLine" id="Weight" >
+                <span class="lineName" id="WeightPos">WEIGHT:</span>
+                <span class="lineLine">__________</span>
+                <span *ngIf="this.PatientInfo.patients.length > 0 && weight!=null" class="UOMinputs">
+                    {{weight}}
+                </span>
+                <span class="UOM">kg</span>
+            </div>
+            <div *ngIf="Height==1" class="wholeLine" id="Height">
+                <span class="lineName" id="HeightPos">HEIGHT:</span>
+                <span class="lineLine">__________</span>
+                <span *ngIf="this.PatientInfo.patients.length > 0 && height!=null" class="UOMinputs">
+                    {{height}}
+                </span>
+                <span class="UOM">cm</span>
+            </div>
+            <div *ngIf="Length==1" class="wholeLine" id="Length">
+                <span class="lineName" id="LengthPos">LENGTH:</span>
+                <span class="lineLine">__________</span>
+                <span *ngIf="this.PatientInfo.patients.length > 0 && height!=null" class="UOMinputs">
+                   {{height}}
+                </span>
+                <span class="UOM">cm</span>
+            </div>
+            <div *ngIf="BSA==1" class="wholeLine" id="BSA">
+                <span class="lineName" id="BSAPos">BSA:</span>
+                <span class="lineLine">__________</span>
+                <span *ngIf="this.PatientInfo.patients.length > 0 && bsa!=null" class="UOMinputs">
+                    {{bsa}}
+                </span>
+                <span class="UOM" id="exponentUOM">m<sup id="exponent">2</sup></span>
+            </div>
+            <div *ngIf="Age==1" class="wholeLine" id="Age">
+                <span class="lineName" id="AgePos">AGE:</span>
+                <span class="lineLine">__________</span>
+                <span *ngIf="this.PatientInfo.patients.length > 0 && age!=null" class="UOMinputs">
+                    {{age}}
+                </span>
+                <span class="UOM">years old</span>
+            </div>
+        </div>
+        <div class="Title">
+            <div class="CTitle">A Hospital</div>
+            <div class="SubCTitle">{{Title}}</div>
+        </div>
+    </div>
+</div>
+<div class="Clear"></div>
+</div>
+

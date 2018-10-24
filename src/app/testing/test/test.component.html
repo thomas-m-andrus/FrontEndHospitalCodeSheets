@@ -1,0 +1,54 @@
+
+  <div>
+    Codesheet:
+    <select #codesheet (change)="this.codesheetSelect=codesheet.value;this.gen=false">
+            <option *ngFor="let c of this.codesheets" value={{c.index}}>{{c.name}}</option>
+    </select>
+    </div>
+
+    <div>
+        <button (click)="PushList()">
+                add
+        </button>
+    </div>
+    <div *ngFor="let patient of this.patients; let i = index">
+        {{i+1}}.  First Name:<input type="text" #fn (keyup)="this.ChangeSTRValue(i,'firstName',fn.value)" size="10" required>
+        Last Name:<input type="text" #ln (keyup)="this.ChangeSTRValue(i,'lastName',ln.value)" size="10" required>
+        Weight:<input type="number" #w (keyup)="this.ChangeSTRValue(i,'weight',w.value)" required>kg
+        Height:<input type="number" #h (keyup)="this.ChangeSTRValue(i,'height',h.value)"required>cm
+        Birth Date:<input #DOB type="date" (change)="patient.dob=DOB.value.toString()" required>
+        <button (click)="this.DeleteRow(i)">
+                delete
+        </button>
+    </div>
+    <div>
+        <button (click)="PushList()">
+                add
+        </button>
+    </div>
+    <div>
+        <button (click)="this.gen=false;this.FillCheckList()">
+            Generate
+        </button>
+    </div>
+    <div>
+        <div>
+            <div *ngFor="let patient of this.p.patients; let patientListIndex = index" class="Forms">
+                <div *ngIf="this.codesheetSelect==1" >
+                    <form1 [tableIndex]="patientListIndex" [tables]="this.MultiDrugTable[patientListIndex]"></form1>
+                </div>
+                <div *ngIf="this.codesheetSelect==2" >
+                    <form2 [tableIndex]="patientListIndex" [tables]="this.MultiDrugTable[patientListIndex]"></form2>
+                </div>
+                <div *ngIf="this.codesheetSelect==3" >
+                    <form3 [tableIndex]="patientListIndex" [tables]="this.MultiDrugTable[patientListIndex]"></form3>
+                </div>
+                <div *ngIf="this.codesheetSelect==4" >
+                    <form4 [tableIndex]="patientListIndex" [tables]="this.MultiDrugTable[patientListIndex]"></form4>
+                </div>
+                <div *ngIf="this.codesheetSelect==5" >
+                    <form5 [tableIndex]="patientListIndex" [tables]="this.MultiDrugTable[patientListIndex]"></form5>
+                </div>
+            </div>
+        </div>
+    </div>

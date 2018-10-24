@@ -1,0 +1,23 @@
+<div *ngIf="table!=null">
+  <div *ngIf="table.IDTType==1">
+      <table-1 [table]="table"></table-1>
+  </div>
+  <div *ngIf="table.IDTType==2">
+      <table-2 [table]="table"></table-2>
+  </div>
+  <div *ngIf="table.IDTType==3">
+      <table-3 [table]="table"></table-3>
+  </div>
+  <div *ngIf="table.IDTType==4">
+      <table-4 [table]="table"></table-4>
+  </div>
+  <div *ngIf="table.IDTType==5">
+      <table-5 [table]="table"></table-5>
+  </div>
+  <div *ngIf="table.IDTType==6">
+      <table-6 [table]="table"></table-6>
+  </div>
+</div>
+<div *ngIf="table==null">
+  LOADING TABLE...
+</div>

@@ -1,0 +1,16 @@
+<header-1
+  [Index]="tableIndex"
+  [Name]="1"
+  [Weight]="1" 
+  [Height]="1" 
+  [BSA]="1" 
+  [Title]="'Management of Allergic/Anaphylactic Reactions'">
+</header-1>
+<div class="warning">* Check with MD or PNP prior to giving*</div>
+<div class="resource">Resources: Somebody</div>
+<div *ngIf="tables">
+  <drug-table [table]="this.tables[0]"></drug-table>
+</div>
+<pre class="subScript">C=Crash Cart        X=Pyxis</pre>
+<div class="reference">Reference: somebody</div>
+<footer-1></footer-1>

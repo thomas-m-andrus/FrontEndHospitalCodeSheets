@@ -1,0 +1,21 @@
+<div id="nav">
+  <ul>
+    <li id="title">
+      <div>Hospital Code Sheets:</div>
+    </li>
+    <li *ngFor='let data of links'>
+      <a [routerLink]="[
+          '/CodeSheet', 
+          this.p.getFirstName(0), 
+          this.p.getLastName(0), 
+          this.rcs.sendDec(this.p.getWeight(0)), 
+          this.rcs.sendDec(this.p.getHeight(0)), 
+          this.p.getMonth(0), 
+          this.p.getDate(0), 
+          this.p.getYear(0), 
+          data 
+          ]" routerLinkActive="active">{{data}}
+      </a>
+    </li>
+  </ul>
+</div>

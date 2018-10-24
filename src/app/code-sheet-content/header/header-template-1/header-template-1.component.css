@@ -1,0 +1,133 @@
+.Header{
+    color: black;
+    padding-bottom: 20px;
+    width: 7in;
+}
+.Clear{
+    clear:both;
+}
+.Title{
+    /*float:right;*/
+    position:absolute;
+    left: 369px;
+    width: 350px;
+}
+.CTitle{
+    font-size: 25px;
+    font-weight: 700;
+}
+.SubCTitle{
+    font-size: 20px;
+}
+
+.patientInfo{
+    position:relative;
+    float:left;
+    width:230px;
+    height:80px;
+    white-space: nowrap;
+}
+.wholeLine{
+    float:left;
+    top:30px;
+}
+.lineName{
+position:absolute;
+}
+
+.lineLine{
+    position:absolute;
+    left: 69px;
+}
+.inputs{
+    position:absolute;
+    left: 69px;
+    font-size: 14px;
+}
+/*
+.UOMinputs{
+    position:absolute;
+    right: -140px;
+    font-size: 14px;
+}*/
+/*These are the correct measurements without bootstrap*/
+.UOMinputs{
+    position:absolute;
+    right: -150px;
+    font-size: 14px;
+}
+/*
+.UOM{
+    position:absolute;
+    left: 145px;
+}*/
+/* These are the correct measurements without bootstrap*/
+.UOM{
+    position:absolute;
+    left: 151px;
+}
+#NamePos{
+    position:absolute;
+    left:18px;
+}
+
+
+#Weight{
+    position:absolute;
+    top:20px;
+}
+#WeightPos{
+    position:absolute;
+    left:1px;
+}
+
+
+#Height{
+    position:absolute;
+    top:40px;
+}
+#HeightPos{
+    position:absolute;
+    left:4px;
+}
+
+
+#BSA{
+    position:absolute;
+    top:60px;
+}
+#BSAPos{
+    position:absolute;
+    left:32px;
+}
+
+
+#Age{
+    position:absolute;
+    top:60px;
+}
+#AgePos{
+    position:absolute;
+    left:31px;
+}
+
+#Length{
+    position:absolute;
+    top:40px;
+}
+#LengthPos{
+    position:absolute;
+    left:0px;
+}
+@media print{
+    .Header{
+        clear:both;
+    }
+
+}
+#exponent{
+    font-size: 12px
+}
+#exponentUOM{
+    top:-3px
+}

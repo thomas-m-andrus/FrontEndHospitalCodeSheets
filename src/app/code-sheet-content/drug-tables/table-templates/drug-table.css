@@ -1,0 +1,45 @@
+
+table, td, th {
+    border: 1px solid black;
+    text-align: center;
+    color: black;
+}
+thead{
+    background: darkgray;
+    font-size: 13px;
+}
+tbody:nth-child(odd){
+    background-color: darkgray;
+}
+.tableName{
+    color: black;
+    width:600px;
+}
+.noWrap{
+    white-space: nowrap;
+}
+tbody{
+    font-size: 11px;
+    }
+.gap{
+    border: none;
+    border-bottom: 1px solid black;
+    width:10px;
+}
+.noWrapGap{
+    border: none;
+    border-bottom: 1px solid black;
+    width:10px;
+    white-space: nowrap;
+}
+.subScript{
+    color: black;
+    text-align: center;
+    font-size: 8px;
+    font-weight: bold;
+}
+table{
+    border-collapse: collapse;
+    font-family: 'Times New Roman';
+    width: 6in;
+}

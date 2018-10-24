@@ -1,0 +1,47 @@
+#nav{
+    list-style:none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width:100%;
+    min-width: 8in; /*If you want nav bar to resize remove this line*/
+    text-align: center;
+    background: darkblue;
+    height:38px;
+    position: fixed;
+    top:0;
+    z-index: 9;
+    
+}
+#title{
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: darkblue;
+    float:left;
+}
+#nav ul{
+    list-style-type: none;
+    margin: 0px;
+    padding:0;
+}
+#nav li{
+    margin:0px;
+}
+#nav li a {
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: darkblue;
+    float:left;
+}
+
+#nav li a:hover{
+    color:white;
+    background-color: blue
+
+}
+#nav ul li a.active{
+    background-color: greenyellow
+}

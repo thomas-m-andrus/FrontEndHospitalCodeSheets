@@ -1,0 +1,24 @@
+.noWrap{
+    white-space: nowrap;
+}
+table{
+    border: 1px solid black;
+    text-align: center;
+    color: black;
+    width: 6in;
+    border-collapse: collapse;
+}
+th{
+   border-bottom: 1px solid black;
+   font-size: 12px; 
+}
+tbody{
+   font-size: 12px; 
+}
+td{
+    padding-top:5px;
+}
+.extra{
+    white-space: nowrap;
+    font-size: 10px;
+}

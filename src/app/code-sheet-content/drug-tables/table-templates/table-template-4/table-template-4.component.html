@@ -1,0 +1,30 @@
+<!--Template for Fluid Limit Table-->
+<table [style.border-top]="this.displayTopBoarder() ? '1px solid black' : null">
+  <thead>
+    <tr>
+      <th colspan="2">{{table.IDTTitle}}</th>
+      <th colspan="2" *ngFor='let column of table.IDTCol'>
+        {{column}}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let data of table.IDTRows'>
+      <td colspan="2">
+      </td>
+      <td colspan="2">
+        <div>
+          {{this.ds.flToTxt2Dec(data.drugAdminRate)+" "+data.drugAdminRateUOM}}
+        </div>
+      </td>
+      <td colspan="2">
+        <div *ngIf="!data.drugCalculatedDose">
+          {{this.ds.flToTxt2Dec(data.drugFlowRate)+" "+data.drugFlowRateUOM}}
+        </div>
+        <div *ngIf="data.drugCalculatedDose">
+          {{this.ds.flToTxt2Dec(data.drugCalculatedDose)+" "+data.drugCalculatedDoseUOM}} or {{this.ds.flToTxt2Dec(data.drugFlowRate)+" "+data.drugFlowRateUOM}}
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

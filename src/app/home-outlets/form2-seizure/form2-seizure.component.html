@@ -1,0 +1,17 @@
+<header-1
+  [Index]="tableIndex"
+  [Name]="1" 
+  [Weight]="1" 
+  [Height]="1" 
+  [Age]="1" 
+  [Title]="'Pediatric Seizure Drug Reference'">
+</header-1>
+<div class="warning">**Please refer to Seizure Guideline</div>
+<div *ngIf="tables">
+  <drug-table [table]="this.tables[0]"></drug-table>
+  <drug-table [table]="this.tables[1]"></drug-table>
+  <drug-table [table]="this.tables[2]"></drug-table>
+</div>
+<pre class="subScript">C=Crash Cart        P= Available from Pharmacy         X=Pyxis        All other med in the orange code box</pre>
+<div class="reference">Reference: somebody</div>
+<footer-1></footer-1>

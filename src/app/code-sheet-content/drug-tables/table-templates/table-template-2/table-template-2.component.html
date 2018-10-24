@@ -1,0 +1,59 @@
+<!--Template for Rate table-->
+<div class="tableName">
+  {{table.IDTTitle}}
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>
+              {{table.IDTCol[0]}}
+            </th> 
+            <th>
+              {{table.IDTCol[1]}}
+            </th>
+            <th class="gap">
+              {{table.IDTCol[2]}}
+            </th>
+            <th class="gap"></th>
+            <th class="gap">
+              {{table.IDTCol[3]}}
+            </th>
+            <th>
+              {{table.IDTCol[4]}}
+            </th>
+        </tr>
+    </thead>
+    <tbody *ngFor='let data of table.IDTRows'>
+        <tr>
+            <td rowspan="2">
+              {{data.drugName}}
+              <div class="subScript" *ngIf='data.drugSubScript!=null'>
+                {{data.drugSubScript}}
+              </div>
+            </td>
+            <td class="noWrap" rowspan="2">
+              <div *ngIf='data.drugConcentration!=null'>
+                {{this.ds.flToTxt2Dec(data.drugConcentration) + " " + data.drugConcentrationUOM}}
+              </div>
+            </td>
+            <td class = "noWrapGap" rowspan="2">
+              <div *ngIf='data.drugAdminRate!=null'>
+                {{this.ds.flToTxt2Dec(data.drugAdminRate)+" "+data.drugAdminRateUOM}}
+              </div>
+            </td>
+            <td class="gap" rowspan="2">
+              =
+            </td>
+            <td class = "noWrapGap" rowspan="2">
+              <div *ngIf='data.drugFlowRate!=null'>
+                {{this.ds.flToTxt2Dec(data.drugFlowRate)+" "+data.drugFlowRateUOM}}
+              </div>
+            </td>
+            <td class="noWrap" rowspan="2">
+              <div *ngIf='data.drugSuggestion!=null'>
+                {{data.drugSuggestion}}
+              </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

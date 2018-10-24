@@ -1,0 +1,24 @@
+.warning, .resource, .reference{
+    color: black;
+    text-align: center;
+    font-size: 12px;
+    width:7in;
+}
+.subScript{
+    color:black;
+    text-align: center;
+    font-size: 8px;
+    font-weight: bold;
+    width:7in;
+}
+.Box{
+    display: inline-block;
+}
+drug-table{
+    display:block;
+    padding-left:.5in;
+    width:6in;
+}
+@media print{
+    .pageBreak{page-break-after: always;}
+}

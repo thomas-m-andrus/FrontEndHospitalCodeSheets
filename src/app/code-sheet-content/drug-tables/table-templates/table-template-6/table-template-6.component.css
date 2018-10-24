@@ -1,0 +1,26 @@
+#tableHeading{
+    width: 600px;
+}
+#RDtableName{
+
+}
+#RDtableInstruc{
+    font-size: 12px;
+}
+table{
+    border-collapse: collapse;
+    font-family: 'Times New Roman';
+    width: 5in;
+}
+table, td, th {
+    border: 1px solid black;
+    text-align: center;
+    color: black;
+}
+td{
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+tbody{
+    font-size: 12px;
+}

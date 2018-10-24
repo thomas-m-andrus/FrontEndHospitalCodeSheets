@@ -1,0 +1,11 @@
+#pageContent{
+    padding-top:70px
+}
+@media print{
+    #pageContent{
+        padding-top:0px
+    }
+    navbar{
+        display:none;
+    }
+}
